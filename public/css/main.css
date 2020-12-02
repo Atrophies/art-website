@@ -57,6 +57,7 @@ main {
 
 #main-content article{
     align-self: flex-start;
+    flex-grow: 1;
 }
 
 h1{
@@ -104,17 +105,20 @@ header, footer {
 }
 
 article.image-highlight{
-    /* display: flex; */
-    /* justify-content: space-between; */
     position: relative;
-    /* flex-direction: column; */
-    /*background: url("https://picsum.photos/1600/452") center center no-repeat;*/
+    background: url("https://picsum.photos/seed/f/1600") center center no-repeat;
+    background-size: cover;
 }
 
 article.image-highlight img{
     /* position: relative; */
     padding: 0;
     max-height: 100%;
+    max-height: 90vh;
+    margin: 0 auto;
+    /* height: 500px; */
+    margin-left: auto;
+    display: block;
 }
 
 article.image-highlight .article-image-header, article.image-highlight .article-image-footer{
@@ -242,4 +246,12 @@ img {
 
 strong {
     font-weight: bold;
+}
+
+
+.bkg-blur {
+    width: 100%;
+    margin: 0;
+    backdrop-filter: blur(20px);
+    padding: 0;
 }
