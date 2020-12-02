@@ -1,7 +1,8 @@
 /* global commonmark: false, parseContent: false */
 const minTimeToShow = 250;//ms
 
-let parser = new commonmark.Parser();
+// to quote, smart: if true, straight quotes will be made curly, -- will be changed to an en dash, --- will be changed to an em dash, and ... will be changed to ellipses.
+let parser = new commonmark.Parser({smart: true});
 let renderer = new commonmark.HtmlRenderer({softbreak: "<br/>"});
 const markdownToHTML = html => {
     return renderer.render(parser.parse(html));
@@ -84,6 +85,16 @@ const processNewURL = path => {
                                     elem.appendChild(document.createTextNode(node));
                                 } else {
                                     elem.insertAdjacentHTML("beforeend", markdownToHTML(node));
+
+                                    // the above is not instant for some reason???
+                                    setTimeout(() => {
+                                        const lastElement = elem.children[elem.children.length - 1];
+                                        // we don't wanna put a paragraph inside a heading, so take the inner html out, put that in the heading, and remove the paragraph
+                                        if (elem.hasAttribute("data-no-para") && lastElement.tagName.toLowerCase() === "p") {
+                                            elem.insertAdjacentHTML("beforeend", lastElement.innerHTML);
+                                            lastElement.remove();
+                                        }
+                                    }, 0);
                                 }
                             }
                         } else {

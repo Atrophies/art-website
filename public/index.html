@@ -14,17 +14,20 @@
   <link rel="stylesheet" href="/css/headings.css">
 </head>
 <body>
-
 <main>
   <header>
-    <h1><a href="/">Site Title Goes Here</a></h1>
+    <h1><a data-id="title" data-no-para href="/">&nbsp;</a></h1>
   </header>
-  <article>
-    <h2 data-id="title" class="content"></h2>
-    <div data-id="article" class="content"></div>
+  <article class="image-highlight">
+<!--    <h2 data-id="title" class="content"></h2>-->
+    <img src="https://picsum.photos/1600/452">
+    <div data-id="article" class="article-image-header content"></div>
+    <div data-id="article-image-footer" class="article-image-footer content"></div>
   </article>
-  <aside id="aside" class="content">
-    Aside
+  <aside>
+    <div data-id="aside" class="content">
+      Aside
+    </div>
   </aside>
   <footer id="footer" class="content">
     Footer

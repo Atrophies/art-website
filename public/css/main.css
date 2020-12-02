@@ -1,182 +1,239 @@
 :root {
-    --padding: 30px;
+    --padding: 10px;
     /* https://coolors.co/000000-ff7f11-ff3f00-ffffff-beb7a4 */
     --text-color: #000000;
-    --background-color-1: #b7b7b7;
-    --background-color-2: #ffffff;
-    --accent-color-1: #5a5a5a;
-    --accent-color-2: #ffae00;
+    --article-bkg: #ffffff;
+    --aside-bkg: transparent;
+    --accent-color: #b7b7b7;
+    --header-color: transparent;
     --code-background-color: #5a5a5a;
-  }
-  
-  [hidden] {
+    --page-background-stripe: #284B63;
+    --page-background-start: #c7cbcc;
+    --page-background-end: #787976;
+    --article-gradient: #333;
+    --article-gradient-transparent: #3339;
+}
+
+[hidden] {
     display: none;
-  }
-  
-  html, a {
+}
+
+html, a {
     color: var(--text-color);
-  }
-  
-  body, html, main {
-    height: 100%;
-  }
-  
-  body {
-    background: var(--accent-color-1);
-    /* background: url("/images/code_bkg.jpg"); */
-    background-size: 100% auto;
+}
+
+body, html, main {
+    /* height: 100%; */
+}
+
+body {
     font-family: "Roboto", sans-serif;
     line-height: 1.3;
-  }
-  
-  main {
-    display: grid;
-    width: 100%;
-    grid-template-columns: [padding] calc(var(--padding) / 2) [middle] minmax(0, 2.5fr) [aside] minmax(0, 1fr) [padding2] calc(var(--padding) / 2) [end];
-    grid-template-rows: [header] fit-content(100px) [middle] auto [footer] fit-content(100px);
-  }
+}
 
-  p{
+main::before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    width: 10vw;
+    height: 100%;
+    left: 0;
+    background: var(--page-background-stripe);
+    z-index: -1;
+}
+
+main {
+    /* display: grid; */
+    width: 100%;
+    grid-template-columns: [middle] minmax(0, 5fr) [aside] 1fr;
+    grid-template-rows: [header] fit-content(100px) [middle] auto [footer] fit-content(100px);
+
+
+    /* fixed stretches the gradient instead of repeating it */
+    background: linear-gradient(var(--page-background-start), var(--page-background-end)) fixed;
+    z-index: -2;
+    position: relative;
+}
+
+h1{
+  text-align: right;
+  width: 100%;
+}
+
+p:not(:last-of-type) {
     margin-bottom: 1em;
-  }
-  
-  .content {
+}
+
+/* :) */
+em {
+    font-style: italic;
+}
+
+.content {
     opacity: 0;
     transition: opacity 200ms;
-  }
-  
-  header {
+}
+
+header {
     /* background: var(--background-color-1); */
-    grid-column: padding / end;
+    grid-column: aside;
     grid-row: header;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
-  
-  header > * {
+}
+
+header > * {
     display: inline-block;
-  }
-  
-  footer {
-    grid-column: padding / end;
+}
+
+footer {
+    grid-column: middle / end;
     grid-row: footer;
     /* background: var(--background-color-2); */
-  }
-  
-  header, footer {
+}
+
+header, footer {
     padding: var(--padding);
-    background: var(--accent-color-2);
-  }
-  
-  article, section {
-    background: var(--background-color-2);
+    background: var(--header-color);
+}
+
+article.image-highlight{
+    /* display: flex; */
+    /* justify-content: space-between; */
+    position: relative;
+    /* flex-direction: column; */
+    /*background: url("https://picsum.photos/1600/452") center center no-repeat;*/
+}
+
+article.image-highlight img{
+    /* position: relative; */
+    padding: 0;
+    max-height: 100%;
+}
+
+article.image-highlight .article-image-header, article.image-highlight .article-image-footer{
+    color: var(--article-bkg);
+    position: absolute;
+    bottom: 0;
+}
+
+article.image-highlight .article-image-header{
+    background: linear-gradient(0deg, transparent, var(--article-gradient));
+    height: 6em;
+    top: 0;
+}
+article.image-highlight .article-image-footer{
+    background: var(--article-gradient-transparent);
+}
+
+article, section {
+    background: var(--article-bkg);
     grid-column: middle;
     grid-row: middle;
-  }
-  
-  pre {
+}
+
+pre {
     white-space: pre-wrap;
     cursor: text;
-  }
-  
-  :not(pre) > code, pre {
+}
+
+:not(pre) > code, pre {
     padding: 2px;
     margin: -2px;
-    color: var(--background-color-1);
+    color: var(--aside-bkg);
     background-color: var(--code-background-color);
-  }
-  
-  aside {
-    background: var(--background-color-1);
+}
+
+aside {
+    background: var(--aside-bkg);
     grid-column: aside;
     grid-row: middle;
-  }
-  
-  @media (max-width: 56.25em) {
+}
+
+@media (max-width: 56.25em) {
     main {
-      grid-template-rows: [header] fit-content(100px) [middle] auto [middle2] auto [footer] fit-content(100px);
+        grid-template-rows: [header] fit-content(100px) [middle] auto [middle2] auto [footer] fit-content(100px);
     }
-  
+
     article, aside, section {
-      grid-column-end: padding2;
+        grid-column-end: padding2;
     }
-  
+
     aside {
-      grid-row: middle2;
-      grid-column-start: middle;
+        grid-row: middle2;
+        grid-column-start: middle;
     }
-  }
-  
-  @media (max-width: 25em) {
+}
+
+@media (max-width: 25em) {
     main {
-      grid-template-rows: [header] fit-content(200px) [middle] auto [middle2] auto [footer] fit-content(200px);
+        grid-template-rows: [header] fit-content(200px) [middle] auto [middle2] auto [footer] fit-content(200px);
     }
-  
+
     main {
-      word-wrap: break-word;
+        word-wrap: break-word;
     }
-  }
-  
-  @media (min-width: 125em) {
+}
+
+@media (min-width: 125em) {
     body {
-      font-size: 1.25em;
+        font-size: 1.25em;
     }
-  }
-  
-  article, aside, section {
-    border-radius: 5px;
+}
+
+article > *, aside, section {
     padding: var(--padding);
-    margin: var(--padding) calc(var(--padding) / 2);
-  }
-  
-  .show {
+    margin: 0;
+}
+
+.show {
     opacity: 1;
-  }
-  
-  a {
+}
+
+a {
     font-weight: bold;
-  }
-  
-  em {
-    background: var(--accent-color-2);
-  }
-  
-  dt, dd {
+}
+
+em {
+    background: var(--header-color);
+}
+
+dt, dd {
     display: inline-block;
-  }
-  
-  dt {
+}
+
+dt {
     font-weight: bold;
-  }
-  
-  dd::after {
+}
+
+dd::after {
     display: block;
-  }
-  
-  dt::after {
+}
+
+dt::after {
     content: ": ";
-  }
-  
-  .bold {
+}
+
+.bold {
     font-weight: bold;
-  }
-  
-  article ::selection {
-    color: var(--background-color-1);
-    background-color: var(--accent-color-1);
-  }
-  
-  aside ::selection {
-    color: var(--background-color-2);
-    background-color: var(--accent-color-1);
-  }
-  
-  img {
+}
+
+article ::selection {
+    color: var(--aside-bkg);
+    background-color: var(--accent-color);
+}
+
+aside ::selection {
+    color: var(--article-bkg);
+    background-color: var(--accent-color);
+}
+
+img {
     max-width: 100%;
-  }
-  
-  strong{
+}
+
+strong {
     font-weight: bold;
-  }
+}
