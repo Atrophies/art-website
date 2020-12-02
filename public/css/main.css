@@ -43,16 +43,20 @@ main::before {
 }
 
 main {
-     display: grid;
     width: 100%;
-    grid-template-columns: [middle] minmax(0, 5fr) [aside] 1fr;
-    grid-template-rows: [header] fit-content(100px) [middle] auto [footer] fit-content(100px);
-
 
     /* fixed stretches the gradient instead of repeating it */
     background: linear-gradient(var(--page-background-start), var(--page-background-end)) fixed;
     z-index: -2;
     position: relative;
+}
+
+#main-content{
+    display: flex;
+}
+
+#main-content article{
+    align-self: flex-start;
 }
 
 h1{
@@ -117,6 +121,8 @@ article.image-highlight .article-image-header, article.image-highlight .article-
     color: var(--article-bkg);
     position: absolute;
     bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 article.image-highlight .article-image-header{
@@ -130,8 +136,8 @@ article.image-highlight .article-image-footer{
 
 article, section {
     background: var(--article-bkg);
-    grid-column: middle;
-    grid-row: middle;
+    /* grid-column: middle; */
+    /* grid-row: middle; */
 }
 
 pre {
