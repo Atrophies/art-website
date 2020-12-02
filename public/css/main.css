@@ -43,7 +43,7 @@ main::before {
 }
 
 main {
-    /* display: grid; */
+     display: grid;
     width: 100%;
     grid-template-columns: [middle] minmax(0, 5fr) [aside] 1fr;
     grid-template-rows: [header] fit-content(100px) [middle] auto [footer] fit-content(100px);
