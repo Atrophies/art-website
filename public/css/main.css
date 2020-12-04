@@ -111,7 +111,7 @@ article.image-highlight{
     position: relative;
     background: url("https://picsum.photos/seed/f/1600") center center no-repeat;
     background-size: cover;
-    margin-left: 40px;
+    margin-left: 90px;
 }
 
 article.image-highlight img{
