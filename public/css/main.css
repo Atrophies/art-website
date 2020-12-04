@@ -54,6 +54,10 @@ main {
     height: 100vh;
 }
 
+aside:blank{
+    display: none;
+}
+
 #main-content{
     display: flex;
 }
