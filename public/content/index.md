@@ -2,7 +2,13 @@
 Home Page
 
 {{{article}}}  
-## Explore Theme
+<div class="bkg-blur">
+    <img src="https://picsum.photos/seed/f/1600/">
+</div>
+<div data-id="article" class="article-image-header content">
+    <h2>Explore Theme</h2>
+</div>
+<div data-id="article-image-footer" class="article-image-footer content"></div>
 
 {{{article-image-footer}}}  
 Title, Artist Name, Medium
