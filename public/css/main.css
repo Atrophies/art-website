@@ -53,6 +53,21 @@ main {
     height: 100vh;
 }
 
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main-content .gallery h2{
+    margin-bottom: 0;
+    position: absolute;
+    background: var(--article-gradient-transparent);
+}
+
+.gallery > * {
+    display: flex;
+}
+
 aside:blank{
     display: none;
 }
