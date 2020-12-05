@@ -129,6 +129,7 @@ header, footer {
     position: relative;
     background: url("https://picsum.photos/seed/f/1600") center center no-repeat;
     background-size: cover;
+    margin-left: 90px;
 }
 
 .image-highlight img{
@@ -155,7 +156,7 @@ header, footer {
     background: var(--article-gradient-transparent);
 }
 
-article, section {
+article>:not(.image-highlight), section {
     background: var(--article-bkg);
     /* grid-column: middle; */
     /* grid-row: middle; */
