@@ -2,6 +2,7 @@
 Home Page
 
 {{{article}}}  
+<div class="image-highlight">
 <div class="bkg-blur">
     <img src="https://picsum.photos/seed/f/1600/">
 </div>
@@ -9,6 +10,7 @@ Home Page
     <h2>Explore Theme</h2>
 </div>
 <div data-id="article-image-footer" class="article-image-footer content"></div>
+</div>
 
 {{{article-image-footer}}}  
 Title, Artist Name, Medium
