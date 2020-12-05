@@ -50,7 +50,6 @@ main {
     /* fixed stretches the gradient instead of repeating it */
     /* background: linear-gradient(var(--page-background-start), var(--page-background-end)) fixed; */
     z-index: -1;
-    position: relative;
     height: 100vh;
 }
 
