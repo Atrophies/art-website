@@ -4,9 +4,8 @@
 {{{title}}}  
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/headings.css">
-<header class='header'>
-    <h1 style="font-size:30px">
-    <a data-id="title"  data-no-para href="/">&nbsp;</a >
+<header class='header' class='boxh'>
+    <h1 style="font-size:30px" >
     Gallery
     </h1>
 </header >
