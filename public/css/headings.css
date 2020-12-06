@@ -8,11 +8,24 @@ h1, h2, h3, h4, h5, h6{
 h1{
 	font-size: 2em;
 	word-wrap: break-word;
-  max-width: 100%;
+    max-width: 100%;
 	align-self: center;
+	color:white;
+	
+
+	
 }
 
+.boxh {
+	
+	background:linear-gradient(to top,var(--page-background-start),var(--page-background-stripe));
+	margin-bottom:50px;
+  
+}
+
+
 h1 a{
+
     text-decoration: none;
     color: inherit;
 }

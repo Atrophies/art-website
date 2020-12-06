@@ -1,5 +1,5 @@
 {{{title}}}   
-Home Page
+Home Page gallery
 
 {{{article}}}  
 <div class="image-highlight">

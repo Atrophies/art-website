@@ -41,7 +41,7 @@ body::before {
     height: 100%;
     left: 0;
     background: var(--page-background-stripe);
-    z-index: -1;
+    z-index: 0;
 }
 
 main {
