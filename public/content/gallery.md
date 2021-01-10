@@ -1,7 +1,19 @@
-{{{title}}}   
-Test title
 
-{{{article}}}  
+
+
+{{{title}}}  
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/headings.css">
+<header class='header' class='boxh'>
+    <h1 style="font-size:30px" >
+    Gallery
+    </h1>
+</header >
+
+
+{{{article}}}
+
+
 <div class="gallery">
 <div>
 <h2>Photography and 2D</h2>
@@ -24,3 +36,4 @@ Test title
 <img src="https://picsum.photos/seed/h/200/500">
 <img src="https://picsum.photos/seed/i/200/500">
 </div>
+

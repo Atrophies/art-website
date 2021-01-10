@@ -41,7 +41,7 @@ body::before {
     height: 100%;
     left: 0;
     background: var(--page-background-stripe);
-    z-index: -1;
+    z-index: 0;
 }
 
 main {
@@ -129,11 +129,12 @@ header, footer {
     position: relative;
     background: url("https://picsum.photos/seed/f/1600") center center no-repeat;
     background-size: cover;
+    margin-left: 90px;
 }
 
 .image-highlight img{
     padding: 0;
-    max-height: 90vh;
+    max-height: 85vh;
     margin: 0 auto;
     display: block;
 }
@@ -155,7 +156,7 @@ header, footer {
     background: var(--article-gradient-transparent);
 }
 
-article, section {
+article>:not(.image-highlight), section {
     background: var(--article-bkg);
     /* grid-column: middle; */
     /* grid-row: middle; */
