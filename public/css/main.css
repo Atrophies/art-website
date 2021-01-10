@@ -14,6 +14,15 @@
     --article-gradient-transparent: #3339;
 }
 
+article div{
+    background: var(--page-background-start);
+    margin: 10px;
+}
+
+.click{
+    cursor: pointer;
+}
+
 [hidden] {
     display: none;
 }
@@ -41,7 +50,7 @@ body::before {
     height: 100%;
     left: 0;
     background: var(--page-background-stripe);
-    z-index: 0;
+    z-index: -1;
 }
 
 main {

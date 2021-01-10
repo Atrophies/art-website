@@ -32,9 +32,9 @@
       <template v-if="artwork && artwork.length">
         <h1>All Artwork</h1>
         <div v-for="category in artwork">
-          <h2><a @click.stop="goto(`/category/${category.categoryId}`)">{{category.categoryName}}</a></h2>
-          <div v-for="art in category.artwork">
-            <a @click.stop="goto(`/category/${category.categoryId}/artwork/${art.id}`)"><img :src="art.url"/> by {{art.author}}</a>
+          <h2 class="click" @click.stop="goto(`/category/${category.categoryId}`)">{{category.categoryName}}</h2>
+          <div class="click" @click.stop="goto(`/category/${category.categoryId}/artwork/${art.id}`)" v-for="art in category.artwork">
+            <img :src="art.url"/> by {{art.author}}
           </div>
         </div>
       </template>
@@ -49,8 +49,8 @@
 
       <div v-if="category">
         <h1>{{category.categoryName}}</h1>
-        <div v-for="art in category.artwork">
-          <a @click.stop="goto(`artwork/${art.id}`)"><img :src="art.url"/> by {{art.author}}</a>
+        <div class="click" @click.stop="goto(`/category/${category.categoryId}/artwork/${art.id}`)" v-for="art in category.artwork">
+          <img :src="art.url"/> by {{art.author}}
         </div>
       </div>
     </article>
