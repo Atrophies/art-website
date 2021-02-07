@@ -44,7 +44,7 @@
         <img :src="art.url"/>
         {{art.title}} by {{art.author}}
 
-        <div v-html="parseMd(art.desc)"></div>
+        <div v-if="art.desc" v-html="parseMd(art.desc)"></div>
       </div>
 
       <div v-if="category">
