@@ -275,10 +275,23 @@ strong {
     font-weight: bold;
 }
 
-
 .bkg-blur {
     width: 100%;
     margin: 0;
     backdrop-filter: blur(20px);
     padding: 0;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(5, calc(100% / 5));
+    overflow-wrap: anywhere;
+}
+
+.category-container audio, .category-container video{
+    max-width: 100%;
+}
+
+.category-container *{
+    max-width: 100%;
 }

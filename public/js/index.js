@@ -29,6 +29,38 @@ const app = new Vue({
     }
 });
 
+Vue.component("art-embed", {
+    template: "#art-embed-template",
+    props: {
+        url: String
+    },
+    computed: {
+        fileExt () {
+            try {
+                const split = new URL(this.url).pathname.split(".");
+                if (split && split.length) {
+                    return split.slice(-1)[0].toLowerCase();
+                } else {
+                    return null;
+                }
+            }catch (e) {
+                return null;
+            }
+        },
+        isImg(){
+            return this.fileExt === "jpg" || this.fileExt === "png" || this.fileExt === "jpeg";
+        },
+        isDoc(){
+            return this.fileExt === "pdf" || this.fileExt === "doc" || this.fileExt === "docx";
+        },
+        isVideo(){
+            return this.fileExt === "mov" || this.fileExt === "mp4" || this.fileExt === "avi" || this.fileExt === "wmv" || this.fileExt === "ogg";
+        },
+        isAudio(){
+            return this.fileExt === "mp3" || this.fileExt === "wav" || this.fileExt === "aac" || this.fileExt === "m4a";
+        }
+    }
+});
 
 onpopstate = onload = onhashchange = () => {
     processNewURL(location.pathname);

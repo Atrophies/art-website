@@ -33,16 +33,18 @@
         <h1>All Artwork</h1>
         <div v-for="category in artwork">
           <h2 class="click" @click.stop="goto(`/category/${category.categoryId}`)">{{category.categoryName}}</h2>
-          <div class="click" @click.stop="goto(`/category/${category.categoryId}/artwork/${art.id}`)" v-for="art in category.artwork">
-            <img :src="art.url"/> by {{art.author}}
+          <div class="category-container">
+            <div class="click" @click.stop="goto(`/category/${category.categoryId}/artwork/${art.id}`)" v-for="art in category.artwork">
+              <art-embed :url="art.thumbUrl || art.url"></art-embed> by {{art.authorName}}
+            </div>
           </div>
         </div>
       </template>
 
       <div v-if="art">
         <h1>art</h1>
-        <img :src="art.url"/>
-        {{art.title}} by {{art.author}}
+        <art-embed :url="art.url"></art-embed>
+        {{art.title}} by {{art.authorName}}
 
         <div v-if="art.desc" v-html="parseMd(art.desc)"></div>
       </div>
@@ -50,7 +52,7 @@
       <div v-if="category">
         <h1>{{category.categoryName}}</h1>
         <div class="click" @click.stop="goto(`/category/${category.categoryId}/artwork/${art.id}`)" v-for="art in category.artwork">
-          <img :src="art.url"/> by {{art.author}}
+          <art-embed :url="art.url"></art-embed> by {{art.author}}
         </div>
       </div>
     </article>
@@ -63,6 +65,16 @@
     Footer
   </footer>
 </main>
+
+<script type="text/x-template" id="art-embed-template">
+<div>
+  {{isImg}} {{isVideo}}
+  <img v-if="isImg" :src="url"/>
+  <audio v-else-if="isAudio" controls :src="url"></audio>
+  <video controls preload="none" v-else-if="isVideo" :src="url"></video>
+  <div v-else>{{url}}</div>
+</div>
+</script>
 
 <script src="/js/commonmark.min.js"></script>
 <script src="/js/contentparser.js"></script>
