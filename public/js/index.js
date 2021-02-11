@@ -54,7 +54,7 @@ Vue.component("art-embed", {
             return this.fileExt === "pdf" || this.fileExt === "doc" || this.fileExt === "docx";
         },
         isVideo(){
-            return this.fileExt === "mov" || this.fileExt === "mp4" || this.fileExt === "avi" || this.fileExt === "wmv" || this.fileExt === "ogg";
+            return this.fileExt === "mov" || this.fileExt === "mp4" || this.fileExt === "avi" || this.fileExt === "wmv" || this.fileExt === "ogg" || this.fileExt === "webm";
         },
         isAudio(){
             return this.fileExt === "mp3" || this.fileExt === "wav" || this.fileExt === "aac" || this.fileExt === "m4a";

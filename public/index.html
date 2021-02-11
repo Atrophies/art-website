@@ -68,7 +68,6 @@
 
 <script type="text/x-template" id="art-embed-template">
 <div>
-  {{isImg}} {{isVideo}}
   <img v-if="isImg" :src="url"/>
   <audio v-else-if="isAudio" controls :src="url"></audio>
   <video controls preload="none" v-else-if="isVideo" :src="url"></video>

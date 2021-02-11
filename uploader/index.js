@@ -11,11 +11,10 @@ const thumbWidth = 500;
 const sleep = ms => new Promise((resolve) => setTimeout(() => resolve(), ms));
 
 const titleCase = str => str.split(" ").map(str => str.slice(0, 1).toUpperCase() + str.slice(1).toLowerCase()).join(" ");
-const bucket = admin.storage().bucket();
 
 const isImage = file => [".jpg", ".png", ".gif", ".jpeg", ".webp", ".tiff"].includes(path.extname(file).toLowerCase());
 const isAudio = file => [".mp3", ".wav", ".aac", ".m4a"].includes(path.extname(file).toLowerCase());
-const isVideo = file => [".mov", ".mp4", ".avi", ".wmv", "ogg"].includes(path.extname(file).toLowerCase());
+const isVideo = file => [".mov", ".mp4", ".avi", ".wmv", "ogg", "webm"].includes(path.extname(file).toLowerCase());
 const isDoc = file => [".pdf", ".doc", ".docx"].includes(path.extname(file).toLowerCase());
 
 const serviceAccount = require("./service-account.json");
@@ -24,6 +23,7 @@ admin.initializeApp({
     storageBucket: "shs-art-website.appspot.com"
 });
 const db = admin.firestore();
+const bucket = admin.storage().bucket();
 
 let categoryMappings = Object.create(null);
 const addedDocIds = [];
