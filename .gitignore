@@ -141,3 +141,5 @@ fabric.properties
 /.idea/modules.xml
 /.idea/art-website.iml
 /.idea/codeStyles/codeStyleConfig.xml
+/uploader/service-account.json
+/uploader/downloaded/
