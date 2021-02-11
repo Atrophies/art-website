@@ -14,7 +14,7 @@ const titleCase = str => str.split(" ").map(str => str.slice(0, 1).toUpperCase()
 
 const isImage = file => [".jpg", ".png", ".gif", ".jpeg", ".webp", ".tiff"].includes(path.extname(file).toLowerCase());
 const isAudio = file => [".mp3", ".wav", ".aac", ".m4a"].includes(path.extname(file).toLowerCase());
-const isVideo = file => [".mov", ".mp4", ".avi", ".wmv", "ogg", "webm"].includes(path.extname(file).toLowerCase());
+const isVideo = file => [".mov", ".mp4", ".avi", ".wmv", ".ogg", ".webm"].includes(path.extname(file).toLowerCase());
 const isDoc = file => [".pdf", ".doc", ".docx"].includes(path.extname(file).toLowerCase());
 
 const serviceAccount = require("./service-account.json");
@@ -53,6 +53,8 @@ async function upload(username, file){
     }
     if(isVideo(file)){
         category = "Video";
+    }else if(file.includes("webm")){
+        debugger;
     }
     if(isDoc(file)){
         category = "Document";
