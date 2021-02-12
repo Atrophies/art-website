@@ -32,9 +32,9 @@
       <template v-if="artwork && artwork.length">
         <h1>All Artwork</h1>
         <div v-for="category in artwork">
-          <h2 class="click" @click.stop="goto(`/category/${category.categoryId}`)">{{category.categoryName}}</h2>
           <div class="category-container">
-            <div class="click" @click.stop="goto(`/category/${category.categoryId}/artwork/${art.id}`)" v-for="art in category.artwork">
+            <h2 class="click" @click.stop="goto(`/category/${category.categoryId}`)">{{category.categoryName}}</h2>
+            <div class="click" @click.stop="goto(`/category/${category.categoryId}/artwork/${art.id}`)" v-for="art in category.artwork.slice(0, 15)">
               <art-embed :url="art.thumbUrl || art.url"></art-embed> by {{art.authorName}}
             </div>
           </div>
@@ -49,10 +49,10 @@
         <div v-if="art.desc" v-html="parseMd(art.desc)"></div>
       </div>
 
-      <div v-if="category">
+      <div v-if="category" class="category-container">
         <h1>{{category.categoryName}}</h1>
         <div class="click" @click.stop="goto(`/category/${category.categoryId}/artwork/${art.id}`)" v-for="art in category.artwork">
-          <art-embed :url="art.url"></art-embed> by {{art.author}}
+          <art-embed :url="art.thumbUrl || art.url"></art-embed> by {{art.author}}
         </div>
       </div>
     </article>
