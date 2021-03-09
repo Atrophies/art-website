@@ -1,3 +1,7 @@
 .window {
     position:absolute;
 }
+
+.doc{
+    position: relative;
+}
