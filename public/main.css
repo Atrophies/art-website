@@ -18,7 +18,6 @@
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: rgb(221, 229, 238);
 }
 .doc{
     position: relative;
@@ -158,7 +157,6 @@
     color: black;
     font-weight: bold;
     font-size: 50px;
-    background: rgb(255 255 255 / 55%);
 }
 /*End of Highlights CSS*/
 
