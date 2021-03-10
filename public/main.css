@@ -168,16 +168,17 @@
 /*Start of Footer CSS*/
 .footer{
     margin-top: 150px;
-    height: 15%;
     padding: 25px 0;
     background-color: rgb(41, 42, 44);
     border-top: black solid 4px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .Fsection{
     background-color: rgb(41, 42, 44);
     font-size: 16px;
+    max-width: 500px;
 }
 .Ftitle{
     color: white;
