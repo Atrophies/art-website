@@ -10,7 +10,7 @@
     left: 0;
     right: 0;
     top: 0;
-    
+
 }
 .window {
     position:absolute;
@@ -37,7 +37,7 @@
     float:right;
     padding:10px;
     width:500px;
-   
+
 }
 .links {
     width:10%;
@@ -138,7 +138,7 @@
     width: 15vw;
     margin-left: 5vw;
     margin-bottom: 2vw;
-    
+
 }
 .Scontainer img{
     Height:auto;
@@ -151,7 +151,7 @@
     top: 57.5%;
     left: 50%;
     width: 35vw;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
 }
 .exploreG{
     display: block;
@@ -167,22 +167,16 @@
 
 /*Start of Footer CSS*/
 .footer{
-    position: relative;
     margin-top: 150px;
-    bottom: 0;
-    right: 0;
-    left: 0;
     height: 15%;
-    padding: 25px 20%;
+    padding: 25px 0;
     background-color: rgb(41, 42, 44);
-    outline: black solid 4px;
+    border-top: black solid 4px;
+    display: flex;
+    justify-content: space-around;
 }
 .Fsection{
-    width: 40%;
-    height: 100%;
-    float: left;
     background-color: rgb(41, 42, 44);
-    margin-right: 5%;
     font-size: 16px;
 }
 .Ftitle{
@@ -211,12 +205,12 @@
 .paragraph{
     text-align: center;
 }.construction{
-    position: absolute;
-    top: -40px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
+     position: absolute;
+     top: -40px;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+ }
 .construction img{
     top: 0;
     height: 100%;
