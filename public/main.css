@@ -20,6 +20,12 @@ V  \
 .floatl{float: left;}
 .floatr{float: right;}
 .txtr{text-align: right;}
+.margL{
+    margin-left: 50px;
+}
+.margR{
+    margin-right: 50px;
+}
 
 
 /*Start of Structure CSS */
@@ -112,7 +118,6 @@ V  \
 .container{
     position: relative;
     width: 40vw;
-    margin:0 50px;
 }
 .container img{
     height: auto;
