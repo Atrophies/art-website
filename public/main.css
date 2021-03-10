@@ -37,7 +37,6 @@
     float:right;
     padding:10px;
     width:500px;
-
 }
 .links {
     width:10%;
@@ -55,19 +54,18 @@
     color:rgb(49, 81, 121);
 
 }
-
-
-
-.headtext {
+.headimg {
     position:absolute;
-    color:black;
-    font-style: bold;
-    margin:0;
-    padding:0px;
+    margin: 7px 30px;
+    width: 15%;
     font-size:2.7vw;
     font-weight: 500;
     text-align: left;
 
+}
+.headimg img{
+    height: auto;
+    width: 100%;
 }
 /*End of Bar CSS */
 
