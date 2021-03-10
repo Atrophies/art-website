@@ -172,7 +172,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    height: 150px;
+    height: 15%;
     padding: 25px 20%;
     background-color: rgb(41, 42, 44);
     outline: black solid 4px;
@@ -183,22 +183,23 @@
     float: left;
     background-color: rgb(41, 42, 44);
     margin-right: 5%;
+    font-size: 16px;
 }
 .Ftitle{
     color: white;
     text-align: center;
-    font-size: 25px;
+    font-size: 2em;
     text-shadow: black 4px 4px 3px;
 }
 .Ftxt{
     color: white;
-    font-size: 15px;
+    font-size: 1em;
     margin-top: 15px;
     margin-bottom: 15px;
     text-shadow: black 4px 4px 3px;
     text-align: center;
 }
-
+/*End of Footer CSS*/
 
 .txtcontainer{
     margin: 0 auto;
@@ -209,4 +210,15 @@
 
 .paragraph{
     text-align: center;
+}.construction{
+    position: absolute;
+    top: -40px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.construction img{
+    top: 0;
+    height: 100%;
+    width: auto;
 }
