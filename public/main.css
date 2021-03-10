@@ -28,6 +28,7 @@
 
 /*Start of Bar CSS*/
 .header {
+    position: relative;
     width:100%;
     height:60px;
     background-color: rgb(221, 229, 238);;
@@ -55,16 +56,15 @@
 }
 .headimg {
     position:absolute;
-    margin: 7px 30px;
-    width: 15%;
-    font-size:2.7vw;
-    font-weight: 500;
-    text-align: left;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 30px;
+    height: 65%;
 
 }
 .headimg img{
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: auto;
 }
 /*End of Bar CSS */
 
