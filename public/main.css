@@ -143,7 +143,7 @@ V  \
 
 
 
-/*Start of Highlights CSS */
+/*Start of gallery CSS */
 .Ggallery{
     position: relative;
     width: 75%;
@@ -200,20 +200,17 @@ V  \
     text-align: center;
 }
 
-/*End of Highlights CSS*/
+/*End of Gallery CSS*/
 
 
 /*Start of Footer CSS*/
 .footer{
     position: relative;
     margin-top: 150px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 15%;
+    height: 150px;
     padding: 25px 20%;
     background-color: rgb(41, 42, 44);
-    outline: black solid 4px;
+    border-top: black solid 4px;
 }
 .Fsection{
     width: 40%;
