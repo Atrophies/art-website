@@ -144,13 +144,19 @@ V  \
 
 
 /*Start of Highlights CSS */
-.highlights{
+.Ggallery{
+    position: relative;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 200px;
+
+}
+.gallery{
     position: relative;
     display: grid;
     grid-template-columns: auto auto auto;
     margin: 0 auto;
-    margin-top: 200px;
-    width: 75%;
+    width: 100%;
 }
 .Scontainer{
     display: inline-grid;
@@ -182,6 +188,18 @@ V  \
     font-size: 50px;
     background: rgb(255 255 255 / 50%);
 }
+.Gtitle{
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 4%;
+    margin-bottom: 20px;
+    margin-top: 200px;
+}
+.Gsubtitle{
+    font-size: 20px;
+    text-align: center;
+}
+
 /*End of Highlights CSS*/
 
 
