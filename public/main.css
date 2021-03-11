@@ -237,6 +237,17 @@ V  \
     text-shadow: black 4px 4px 3px;
     text-align: center;
 }
+.copyright{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    text-shadow: black 4px 4px 3px;
+    font-size: .7em;
+    text-align: center;
+    margin-bottom: 3px;
+}
 /*End of Footer CSS*/
 
 .txtcontainer{
