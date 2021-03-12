@@ -1,0 +1,25 @@
+D:\VSSource\art-website\Buildware\bin\Debug\netcoreapp3.1\Buildware.exe
+D:\VSSource\art-website\Buildware\bin\Debug\netcoreapp3.1\Buildware.deps.json
+D:\VSSource\art-website\Buildware\bin\Debug\netcoreapp3.1\Buildware.runtimeconfig.json
+D:\VSSource\art-website\Buildware\bin\Debug\netcoreapp3.1\Buildware.runtimeconfig.dev.json
+D:\VSSource\art-website\Buildware\bin\Debug\netcoreapp3.1\Buildware.dll
+D:\VSSource\art-website\Buildware\bin\Debug\netcoreapp3.1\Buildware.pdb
+D:\VSSource\art-website\Buildware\obj\Debug\netcoreapp3.1\Buildware.AssemblyInfoInputs.cache
+D:\VSSource\art-website\Buildware\obj\Debug\netcoreapp3.1\Buildware.AssemblyInfo.cs
+D:\VSSource\art-website\Buildware\obj\Debug\netcoreapp3.1\Buildware.csproj.CoreCompileInputs.cache
+D:\VSSource\art-website\Buildware\obj\Debug\netcoreapp3.1\Buildware.dll
+D:\VSSource\art-website\Buildware\obj\Debug\netcoreapp3.1\Buildware.pdb
+D:\VSSource\art-website\Buildware\obj\Debug\netcoreapp3.1\Buildware.genruntimeconfig.cache
+F:\Code Stuff\Github Repositories\art-website\Buildware\bin\Debug\netcoreapp3.1\Buildware.exe
+F:\Code Stuff\Github Repositories\art-website\Buildware\bin\Debug\netcoreapp3.1\Buildware.deps.json
+F:\Code Stuff\Github Repositories\art-website\Buildware\bin\Debug\netcoreapp3.1\Buildware.runtimeconfig.json
+F:\Code Stuff\Github Repositories\art-website\Buildware\bin\Debug\netcoreapp3.1\Buildware.runtimeconfig.dev.json
+F:\Code Stuff\Github Repositories\art-website\Buildware\bin\Debug\netcoreapp3.1\Buildware.dll
+F:\Code Stuff\Github Repositories\art-website\Buildware\bin\Debug\netcoreapp3.1\Buildware.pdb
+F:\Code Stuff\Github Repositories\art-website\Buildware\obj\Debug\netcoreapp3.1\Buildware.csprojAssemblyReference.cache
+F:\Code Stuff\Github Repositories\art-website\Buildware\obj\Debug\netcoreapp3.1\Buildware.AssemblyInfoInputs.cache
+F:\Code Stuff\Github Repositories\art-website\Buildware\obj\Debug\netcoreapp3.1\Buildware.AssemblyInfo.cs
+F:\Code Stuff\Github Repositories\art-website\Buildware\obj\Debug\netcoreapp3.1\Buildware.csproj.CoreCompileInputs.cache
+F:\Code Stuff\Github Repositories\art-website\Buildware\obj\Debug\netcoreapp3.1\Buildware.dll
+F:\Code Stuff\Github Repositories\art-website\Buildware\obj\Debug\netcoreapp3.1\Buildware.pdb
+F:\Code Stuff\Github Repositories\art-website\Buildware\obj\Debug\netcoreapp3.1\Buildware.genruntimeconfig.cache
