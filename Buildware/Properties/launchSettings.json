@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Buildware": {
+      "commandName": "Project",
+      "commandLineArgs": "\"F:\\Code Stuff\\Github Repositories\\art-website\\public\"",
+      "sqlDebugging": true
+    }
+  }
+}
