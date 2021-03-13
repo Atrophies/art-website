@@ -53,42 +53,41 @@ V  \
 /*Start of Bar CSS*/
 .header {
     position: relative;
-    width:100%;
     height:60px;
     background-color: rgb(221, 229, 238);
 }
+.flex{
+    height: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .nav {
-    float:right;
-    padding:10px;
-    width:500px;
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly
 }
 .links {
     width:10%;
+    margin-right: 10px;
     font-size:30px;
-    margin-right:90px;
     font-weight: bold;
-    float:right;
     color:black;
     text-decoration: none;
-
 }
-
-
-.nav a:hover {
+.header a:hover {
     color:rgb(49, 81, 121);
 
 }
 .headimg {
-    position:absolute;
-    top: 50%;
-    transform: translateY(-50%);
     margin-left: 30px;
-    height: 65%;
+    max-width: 200px;
+
 
 }
 .headimg img{
-    height: 100%;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 /*End of Bar CSS */
 
@@ -120,8 +119,9 @@ V  \
     width: 40vw;
 }
 .container img{
-    height: auto;
+    height: 500px;
     Width:100%;
+    object-fit: cover;
 }
 .Agradient {
     position: absolute;
@@ -146,7 +146,7 @@ V  \
 /*Start of gallery CSS */
 .Ggallery{
     position: relative;
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 200px;
 
@@ -154,9 +154,16 @@ V  \
 .gallery{
     position: relative;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     margin: 0 auto;
     width: 100%;
+}
+.gallery3{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 0 auto;
+    width: 75%;
 }
 .Scontainer{
     display: inline-grid;
@@ -164,12 +171,18 @@ V  \
     width: 15vw;
     margin-left: 5vw;
     margin-bottom: 2vw;
-
+}
+.Scontainer .container{
+    position: relative;
+    width: 100%;
+    height: 15vw;
+    margin-bottom: 10px;
 }
 .Scontainer img{
-    Height:auto;
+    Height:100%;
     Width:100%;
     border: black solid 2px;
+    object-fit: cover;
 }
 .explorecontainer{
     z-index: 1;
@@ -205,19 +218,20 @@ V  \
 
 /*Start of Footer CSS*/
 .footer{
+    display: flex;
+    justify-content: space-evenly;
     position: relative;
+    flex-wrap: wrap;
     margin-top: 150px;
-    height: 150px;
-    padding: 25px 20%;
+    padding: 25px 25px;
     background-color: rgb(41, 42, 44);
     border-top: black solid 4px;
 }
 .Fsection{
-    width: 40%;
+    width: 700px;
     height: 100%;
     float: left;
     background-color: rgb(41, 42, 44);
-    margin-right: 5%;
     font-size: 16px;
 }
 .Ftitle{

@@ -10,15 +10,17 @@
 <body>
     <div class='window'>
         <div class='doc'>
-            <div class='header'>
-                <a href='index.html' class='headimg'>
-                    <img src='Images/eol.png' alt=''>
-                </a>
-                <div class='nav'>
-                  <a href='about.html' class='links'>About</a>
-                  <a href='gallery.html'class='links'>Gallery</a>
+            <div class="header">
+                <div class="flex">
+                  <div class="headimg">
+                    <a href="index.html"><img src="Images/eol.png" alt=""></a>
+                  </div>
+                  <div class="nav">
+                    <a href="about.html" class="links floatr">About</a>
+                    <a href="gallery.html"class="links floatr">Gallery</a>
+                  </div>
                 </div>
-            </div>
+              </div>
             <div class='main'>
                 <div class='Atxtcontainer'>
                   <div class= 'welcome'>Welcome to the Gallery</div>
@@ -35,22 +37,31 @@
                 </div>
             </div>
             <div class='Ggallery'>
-                <div class='Gtitle'>Digital-</div>
+                <div class="Gtitle">Links to Mediums-</div>
+                <div class="header">
+                    <a href="#Digital" class="links floatl">Digital</a>
+                    <a href="#Physical" class="links floatl">Physical</a>
+                </div>
+                <div class='Gtitle' id="Digital">Digital-</div>
                 <div class='gallery'>
                     $$-Repeat(Digital)$$-
                     <div class='Scontainer'>
-                        <img src='{Filename}'></img>
+                        <div class="container">
+                            <img src='{Filename}'></img>
+                        </div>
                         <div class= 'Gsubtitle'>{Title}</div>
                         <div class= 'Gsubtitle'>By {Name}</div>
                     </div>
                     $$-EndRepeat$$-
                 </div>
 
-                <div class='Gtitle'>Physical-</div>
+                <div class='Gtitle' id="Physical">Physical-</div>
                 <div class='gallery'>
                     $$-Repeat(Physical)$$-
                     <div class='Scontainer'>
-                        <img src='{Filename}'></img>
+                        <div class="container">
+                            <img src='{Filename}'></img>
+                        </div>
                         <div class= 'Gsubtitle'>{Title}</div>
                         <div class= 'Gsubtitle'>By {Name}</div>
                     </div>
