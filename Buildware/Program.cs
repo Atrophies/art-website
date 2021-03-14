@@ -127,6 +127,7 @@ namespace Buildware
             builder.Append(initial);
 
             var medium = GetMediumFromHeader(header);
+            int id = 1;
             foreach( var fileInfo in fileInfos)
             {
                 if( fileInfo.Medium == medium)
@@ -134,8 +135,10 @@ namespace Buildware
                     body = body.Replace("{Filename}", "{0}");
                     body = body.Replace("{Title}", "{1}");
                     body = body.Replace("{Name}", "{2}");
-                    builder.Append( string.Format(body, fileInfo.Filename, fileInfo.Title, fileInfo.Name));
+                    body = body.Replace("{Id}", "{3}");
+                    builder.Append( string.Format(body, fileInfo.Filename, fileInfo.Title, fileInfo.Name, id));
                 }
+                id++;
             }
      
             if (sections.Length == 5)

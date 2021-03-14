@@ -10,7 +10,7 @@
 <body>
     <div class='window'>
         <div class='doc'>
-            <div class="header">
+            <div class="header" id="top">
                 <div class="flex">
                   <div class="headimg">
                     <a href="index.html"><img src="Images/eol.png" alt=""></a>
@@ -39,23 +39,29 @@
                 </div>
             </div>
 
-
-            <div class='Ggallery'>
-                <div class="Gtitle" id="mediums">Links to Mediums-</div>
-                <div class="header">
-                    <a href="#digital" class="links floatl">Digital</a>
-                    <a href="#physical" class="links floatl">Physical</a>
-                </div>
+            <div class="header margL margT">
+                <a href="#digital" class="links floatl">Digital</a>
+                <a href="#physical" class="links floatl">Physical</a>
+            </div>
+            <div class='Ggallery'>                
                 <div class='Gtitle' id="digital">Digital-</div>
                 <div class='gallery'>
                     $$-Repeat(Digital)$$-
                     <div class='Scontainer'>
                         <div class="container">
-                            <img src='{Filename}'></img>
+                            <img src='{Filename}' onclick='document.getElementById("big{Id}").setAttribute("class", "BigBackground")'></img>
                         </div>
                         <div class= 'Gsubtitle'>{Title}</div>
                         <div class= 'Gsubtitle'>By {Name}</div>
                     </div>
+
+                    <div class='BigBackgroundHidden' id='big{Id}' onclick='document.getElementById("big{Id}").setAttribute("class", "BigBackgroundHidden")'><div class='BigFrame'>
+                        <div class="BigContainer">
+                            <img src='{Filename}'></img>
+                        </div>
+                        <div class= 'Gsubtitle'>{Title}</div>
+                        <div class= 'Gsubtitle'>By {Name}</div>
+                    </div></div>
                     $$-EndRepeat$$-
                 </div>
 
@@ -64,11 +70,19 @@
                     $$-Repeat(Physical)$$-
                     <div class='Scontainer'>
                         <div class="container">
-                            <img src='{Filename}'></img>
+                            <img src='{Filename}' onclick='document.getElementById("big{Id}").setAttribute("class", "BigBackground")'></img>
                         </div>
                         <div class= 'Gsubtitle'>{Title}</div>
                         <div class= 'Gsubtitle'>By {Name}</div>
                     </div>
+
+                    <div class='BigBackgroundHidden' id='big{Id}' onclick='document.getElementById("big{Id}").setAttribute("class", "BigBackgroundHidden")'><div class='BigFrame'>
+                        <div class="BigContainer">
+                            <img src='{Filename}'></img>
+                        </div>
+                        <div class= 'Gsubtitle'>{Title}</div>
+                        <div class= 'Gsubtitle'>By {Name}</div>
+                    </div></div>
                     $$-EndRepeat$$-
                 </div>
 
@@ -89,8 +103,11 @@
             </div>
 
         </div>
-        <div class="topbutton">
-            <a href="#mediums">Back to Top</a>
+        <div class="topbutton l">
+            <a href="#top">Back to Top</a>
+        </div>
+        <div class="topbutton r">
+            <a href="#top">Back to Top</a>
         </div>
     </div>
 </body>

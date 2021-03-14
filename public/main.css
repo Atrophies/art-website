@@ -15,17 +15,15 @@ V  \
                   `--..____..--'
 */
 
-
+.l{left: 20px;}
+.r{right: 20px;}
 .relative {position:relative;}
 .floatl{float: left;}
 .floatr{float: right;}
 .txtr{text-align: right;}
-.margL{
-    margin-left: 50px;
-}
-.margR{
-    margin-right: 50px;
-}
+.margL{ margin-left: 50px;}
+.margR{margin-right: 50px;}
+.margT{margin-top: 25px;}
 
 
 /*Start of Structure CSS */
@@ -145,7 +143,6 @@ V  \
 }
 .topbutton{
     position: fixed;
-    right: 20px;
     bottom: 25px;
 }
 .topbutton a{
@@ -169,6 +166,7 @@ V  \
 .gallery{
     position: relative;
     display: grid;
+    justify-content: center;
     grid-template-columns: auto auto auto auto;
     margin: 0 auto;
     width: 100%;
@@ -198,6 +196,7 @@ V  \
     Width:100%;
     border: black solid 3px;
     object-fit: cover;
+    cursor:pointer;
 }
 .explorecontainer{
     z-index: 1;
@@ -227,7 +226,34 @@ V  \
     font-size: 20px;
     text-align: center;
 }
-
+.BigBackgroundHidden{
+    display: none;
+}
+.BigBackground{
+    display: flex;
+    position:fixed;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.904);
+    z-index: 100;
+}
+.BigFrame{
+    position:absolute;
+    background-color: white;
+    padding: 20px;
+}
+.BigContainer{
+    position: relative;
+    cursor:pointer;
+}
+.BigContainer img{
+    max-width: 50vw;
+    max-height: 90vh;
+}
 /*End of Gallery CSS*/
 
 
@@ -275,16 +301,7 @@ V  \
 }
 /*End of Footer CSS*/
 
-.txtcontainer{
-    margin: 0 auto;
-    margin-top: 40px;
-    width: 50vw;
-    font-size: 20px;
-}
-
-.paragraph{
-    text-align: center;
-}.construction{
+.construction{
      position: absolute;
      top: -40px;
      bottom: 0;
@@ -296,3 +313,4 @@ V  \
     height: 100%;
     width: auto;
 }
+
