@@ -326,52 +326,46 @@ V  \
 }
 /*End of Footer CSS*/
 
-.construction{
-     position: absolute;
-     top: -40px;
-     bottom: 0;
-     left: 50%;
-     transform: translateX(-50%);
- }
-.construction img{
-    top: 0;
-    height: 100%;
-    width: auto;
-}
-
-
 
 /*Start of About CSS*/
 .para {
-
-    font-size: 20px;
+    font-size: clamp(.5rem, 1vw, 1.25rem);
     color:rgb(228, 228, 228);
-    
-
-   
     text-shadow: rgb(61, 61, 61) 4px 4px 3px;
-   
+}
+.Atitle{
+    font-size:25px;
+    font-size: clamp(.75rem, 1.25vw, 1.5625rem);
+    color:white;
+    text-shadow: black 4px 4px 3px;
+    margin-bottom: 10px;
 }
 .box{
-    width:500px;
-    height:auto;
+    width: min(25%, 500px);
     margin-top:50px;
-    text-align:left;
     padding:50px;
     background-color: rgb(89, 97, 117);
     box-shadow: rgb(158, 158, 158) 4px 4px 3px;
     
 }
-
-
-.Atitle{
-    font-size:25px;
-    color:white;
-    text-shadow: black 4px 4px 3px;
-    margin-bottom: 10px;
-}
-
 .flex2 {
     display:flex;
     justify-content: space-around;
 }
+/*End of About CSS*/
+
+
+.construction{
+    position: absolute;
+    top: -40px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.construction img{
+   top: 0;
+   height: 100%;
+   width: auto;
+}
+
+
