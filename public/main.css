@@ -158,6 +158,7 @@ V  \
     display: grid;
     justify-content: space-evenly;
     grid-template-columns: auto auto auto auto;
+    grid-gap: 20px 0;
     margin: 0 auto;
     width: 100%;
 }
