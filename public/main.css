@@ -166,7 +166,7 @@ V  \
 .gallery{
     position: relative;
     display: grid;
-    justify-content: center;
+    justify-content: space-evenly;
     grid-template-columns: auto auto auto auto;
     margin: 0 auto;
     width: 100%;
@@ -179,11 +179,9 @@ V  \
     width: 75%;
 }
 .Scontainer{
-    display: inline-grid;
+    justify-items: center;
     position: relative;
     width: 15vw;
-    margin-left: 5vw;
-    margin-bottom: 2vw;
 }
 .Scontainer .container{
     position: relative;
