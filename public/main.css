@@ -121,8 +121,8 @@ V  \
     width: 40vw;
 }
 .container img{
-    height: 500px;
     Width:100%;
+    height: 25vw;
     object-fit: cover;
 }
 .Agradient {
@@ -140,16 +140,6 @@ V  \
     right: 0;
     height: 200px;
     background-image: linear-gradient(to bottom, rgba(255,0,0,0)75%, rgb(0, 0, 0)105%);
-}
-.topbutton{
-    position: fixed;
-    bottom: 25px;
-}
-.topbutton a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
 }
 /*End of Home Page Picture CSS */
 
@@ -174,6 +164,8 @@ V  \
 .gallery3{
     position: relative;
     display: grid;
+    justify-content: space-evenly;
+    grid-gap: 40px 0;
     grid-template-columns: auto auto auto;
     margin: 0 auto;
     width: 75%;
@@ -189,17 +181,24 @@ V  \
     height: 15vw;
     margin-bottom: 10px;
 }
-.Scontainer img{
+.Scontainer .container img{
     Height:100%;
     Width:100%;
     border: black solid 3px;
     object-fit: cover;
     cursor:pointer;
 }
+.Scontainer img{
+    height: 15vw;
+    Width:100%;
+    border: black solid 3px;
+    object-fit: cover;
+
+}
 .explorecontainer{
     z-index: 1;
     position: absolute;
-    top: 57.5%;
+    top: 50%;
     left: 50%;
     width: 35vw;
     transform: translate(-50%, -50%);
@@ -251,6 +250,16 @@ V  \
 .BigContainer img{
     max-width: 50vw;
     max-height: 90vh;
+}
+.topbutton{
+    position: fixed;
+    bottom: 25px;
+}
+.topbutton a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
 }
 /*End of Gallery CSS*/
 
