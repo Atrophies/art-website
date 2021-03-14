@@ -143,6 +143,17 @@ V  \
     height: 200px;
     background-image: linear-gradient(to bottom, rgba(255,0,0,0)75%, rgb(0, 0, 0)105%);
 }
+.topbutton{
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+}
+.topbutton a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
 /*End of Home Page Picture CSS */
 
 
@@ -185,7 +196,7 @@ V  \
 .Scontainer img{
     Height:100%;
     Width:100%;
-    border: black solid 2px;
+    border: black solid 3px;
     object-fit: cover;
 }
 .explorecontainer{
@@ -257,11 +268,10 @@ V  \
     bottom: 0;
     left: 0;
     right: 0;
-    color: white;
-    text-shadow: black 4px 4px 3px;
-    font-size: .7em;
+    color: rgb(170, 170, 170);
+    font-size: .55em;
     text-align: center;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
 }
 /*End of Footer CSS*/
 
