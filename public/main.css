@@ -339,3 +339,39 @@ V  \
     width: auto;
 }
 
+
+
+/*Start of About CSS*/
+.para {
+
+    font-size: 20px;
+    color:rgb(228, 228, 228);
+    
+
+   
+    text-shadow: rgb(61, 61, 61) 4px 4px 3px;
+   
+}
+.box{
+    width:500px;
+    height:auto;
+    margin-top:50px;
+    text-align:left;
+    padding:50px;
+    background-color: rgb(89, 97, 117);
+    box-shadow: rgb(158, 158, 158) 4px 4px 3px;
+    
+}
+
+
+.Atitle{
+    font-size:25px;
+    color:white;
+    text-shadow: black 4px 4px 3px;
+    margin-bottom: 10px;
+}
+
+.flex2 {
+    display:flex;
+    justify-content: space-around;
+}
