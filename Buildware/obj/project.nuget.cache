@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ALDwVSzbUdsE2d+FDTPPF3tag7VvNa1Q7BBfKyKKt0y4wZUkqscBNKhfRSZ7LuZlQYOFLPvvlj7EIlnG5mCKSQ==",
+  "dgSpecHash": "g4MjoBq4ztV4aei8R9bRRwYALDEFXeRRi65RYiBgTjAl4eWcdSTMTjkQYnmbJwW6QPsTHsp7XpLhI3McZLG59Q==",
   "success": true,
   "projectFilePath": "F:\\Code Stuff\\Github Repositories\\art-website\\Buildware\\Buildware.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ninte\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\ninte\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\ninte\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

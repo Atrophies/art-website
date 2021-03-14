@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 
 namespace Buildware
 {
     class Program
     {
-
+        public static string ThumbnailDirectory = "gallerythumbnails";
         public class FileInfo
         {
             public enum Mediums
@@ -19,7 +22,7 @@ namespace Buildware
                 Video,
                 Unknown
             }
-            public FileInfo( string filename, string path)
+            public FileInfo( string filename, string path, string root)
             { 
                 Filename = Path.Combine( path, Path.GetFileName(filename));
                 filename = Path.GetFileName(filename);
@@ -60,15 +63,61 @@ namespace Buildware
                             Medium = Mediums.Video;
                             break;
                     }
+
+                    if (Medium == Mediums.Physical || Medium == Mediums.Digital)
+                    {
+                        ThumbnailFilename = Path.Combine(ThumbnailDirectory, path.Replace('\\', '.') + filename);
+                        if (!File.Exists(Path.Combine(root, ThumbnailFilename)))
+                            CreateThumbnail(Path.Combine(root, Filename), Path.Combine(root, ThumbnailFilename), 150);
+                    }
+
                 }
             }
 
             public string Filename;
+            public string ThumbnailFilename;
             public string Extension;
             public string Name = "Anonymous";
             public string LastName = "Anonymouse";
             public string Title = "Untitled";
             public Mediums Medium = Mediums.Unknown;
+
+            private void CreateThumbnail(string originalFile, string thumbnailFile, int newWidth)
+            {
+                try
+                {
+                    using (var image = Image.FromFile(originalFile))
+                    {
+                        var newHeight = (int)((float)newWidth / image.Width * image.Height);
+
+                        using (var thumbnail = new Bitmap(newWidth, newHeight))
+                        {
+                            using (var graphic = System.Drawing.Graphics.FromImage(thumbnail))
+                            {
+                                graphic.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                                graphic.SmoothingMode = SmoothingMode.HighQuality;
+                                graphic.PixelOffsetMode = PixelOffsetMode.HighQuality;
+                                graphic.CompositingQuality = CompositingQuality.HighQuality;
+
+                                graphic.DrawImage(image, 0, 0, newWidth, newHeight);
+
+                                var info = ImageCodecInfo.GetImageEncoders();
+                                var encoderParameters = new EncoderParameters(1);
+                                encoderParameters.Param[0] = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100L);
+                                thumbnail.Save(thumbnailFile, info[1], encoderParameters);
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+                    Console.Write($"Image cannot load - {originalFile}");
+                }
+            }
+
+
+
+
         }
         static void Main(string[] args)
         {
@@ -86,6 +135,10 @@ namespace Buildware
             var publicDir = rootDir;
 //            var publicDir = Path.Combine(rootDir, "public");
             var gallery = Path.Combine(publicDir, "galleryimages");
+            var thumbnailGallery = Path.Combine(publicDir, ThumbnailDirectory);
+
+            if (!Directory.Exists(thumbnailGallery))
+                Directory.CreateDirectory(thumbnailGallery);
 
             var fileInfos = new List<FileInfo>();
             WalkFolder(publicDir, "galleryimages", fileInfos);
@@ -136,7 +189,8 @@ namespace Buildware
                     body = body.Replace("{Title}", "{1}");
                     body = body.Replace("{Name}", "{2}");
                     body = body.Replace("{Id}", "{3}");
-                    builder.Append( string.Format(body, fileInfo.Filename, fileInfo.Title, fileInfo.Name, id));
+                    body = body.Replace("{Thumbnail}", "{4}");
+                    builder.Append( string.Format(body, fileInfo.Filename, fileInfo.Title, fileInfo.Name, id, fileInfo.ThumbnailFilename));
                 }
                 id++;
             }
@@ -165,7 +219,7 @@ namespace Buildware
         {
             foreach (var filename in Directory.GetFiles(Path.Combine( root, path)))
             {
-                files.Add(new FileInfo( Path.GetFileName( filename), path));
+                files.Add(new FileInfo( Path.GetFileName( filename), path, root));
             }
         }
         static void WalkFolder(string root, string path, List<FileInfo> fileInfos)
