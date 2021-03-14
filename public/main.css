@@ -22,8 +22,10 @@ V  \
 .floatr{float: right;}
 .txtr{text-align: right;}
 .margL{ margin-left: 50px;}
+.margL4{margin-left: 4%;}
 .margR{margin-right: 50px;}
 .margT{margin-top: 25px;}
+
 
 
 /*Start of Structure CSS */
@@ -64,6 +66,7 @@ V  \
     width: 300px;
     display: flex;
     justify-content: space-evenly
+    
 }
 .links {
     width:10%;
@@ -100,7 +103,7 @@ V  \
 }
 .mainflex{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .Atxtcontainer{
     z-index: 1;
@@ -119,6 +122,7 @@ V  \
 .container{
     position: relative;
     width: 40vw;
+    object-fit: cover;
 }
 .container img{
     Width:100%;
@@ -205,18 +209,19 @@ V  \
     transform: translate(-50%, -50%);
 }
 .exploreG{
-    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.centertxt{
     text-align: center;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 50px;
-    background: rgb(255 255 255 / 50%);
 }
 .Gtitle{
     font-size: 40px;
     font-weight: bold;
-    margin-left: 4%;
     margin-bottom: 20px;
     margin-top: 200px;
 }
